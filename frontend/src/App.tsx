@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AnalysisPage from './pages/AnalysisPage';
 import UserDashboard from './pages/UserDashboard';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 const App: React.FC = () => {
   return (
@@ -39,6 +41,20 @@ const App: React.FC = () => {
                   </Link>
                 </div>
               </div>
+              <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                <Link
+                  to="/login"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
+                >
+                  登录
+                </Link>
+                <Link
+                  to="/register"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                >
+                  注册
+                </Link>
+              </div>
             </div>
           </div>
         </nav>
@@ -48,6 +64,8 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/analysis" element={<AnalysisPage />} />
           <Route path="/dashboard" element={<UserDashboard />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>
