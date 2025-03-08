@@ -5,6 +5,7 @@ import AnalysisPage from './pages/AnalysisPage';
 import UserDashboard from './pages/UserDashboard';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import CorrelationAnalysis from './components/CorrelationAnalysis';
 
 const App: React.FC = () => {
   return (
@@ -32,6 +33,12 @@ const App: React.FC = () => {
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
                     数据分析
+                  </Link>
+                  <Link
+                    to="/correlation"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    相关性分析
                   </Link>
                   <Link
                     to="/dashboard"
@@ -63,6 +70,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/analysis" element={<AnalysisPage />} />
+          <Route path="/correlation" element={<CorrelationAnalysis />} />
           <Route path="/dashboard" element={<UserDashboard />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
